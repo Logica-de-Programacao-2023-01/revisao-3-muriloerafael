@@ -1,9 +1,17 @@
 package q3
 
-//Você está subindo uma escada. Leva n passos para chegar ao topo.
-//
-//A cada vez, você pode subir 1 ou 2 degraus. De quantas maneiras distintas você pode subir até o topo?
-
 func ClimbStairs(n int) int {
-	return 0
+	if n == 1 {
+		return 1
+	}
+
+	waysClimb := make([]int, n+1)
+	waysClimb[1] = 1
+	waysClimb[2] = 2
+
+	for i := 3; i <= n; i++ {
+		waysClimb[i] = waysClimb[i-1] + waysClimb[i-2]
+	}
+
+	return waysClimb[n]
 }

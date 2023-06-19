@@ -69,6 +69,6 @@ func createLinkedList(input []int) *LinkedList {
 		}
 		current = current.Next
 	}
-	return head
 
+	return head
 }

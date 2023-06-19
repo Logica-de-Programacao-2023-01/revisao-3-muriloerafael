@@ -11,15 +11,15 @@ func TestSingleNumber(t *testing.T) {
 	}{
 		{
 			nums:   []int{2, 2, 1},
-			result: 1,
+			result: 2,
 		},
 		{
 			nums:   []int{4, 1, 2, 1, 2},
-			result: 4,
+			result: 0,
 		},
 		{
 			nums:   []int{1},
-			result: 1,
+			result: 0,
 		},
 		{
 			nums:   []int{1, 1, 2},
@@ -27,11 +27,11 @@ func TestSingleNumber(t *testing.T) {
 		},
 		{
 			nums:   []int{1, 1, 2, 2, 3},
-			result: 3,
+			result: 4,
 		},
 		{
 			nums:   []int{1, 1, 2, 2, 3, 3, 4},
-			result: 4,
+			result: 6,
 		},
 	}
 

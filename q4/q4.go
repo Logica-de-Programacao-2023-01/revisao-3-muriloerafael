@@ -4,14 +4,14 @@ func SingleNumber(nums []int) int {
 	numMap := make(map[int]int)
 
 	for _, num := range nums {
-		numMap[num] += 1
+		numMap[num]++
 	}
 
-	for key, value := range numMap {
-		if value == 1 {
-			return key
+	for i, num := range nums {
+		if numMap[num] == 1 {
+			return i
 		}
 	}
 
-	return 0
+	return -1
 }
